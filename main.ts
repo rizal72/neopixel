@@ -1,8 +1,16 @@
+input.onButtonPressed(Button.A, function () {
+    strip.clear()
+    EPXDisplay.play(strip, EPXAnimations.Weather)
+    strip.show()
+    basic.showString("A")
+})
+let strip: neopixel.Strip = null
 let width = 16
 let height = 16
-let strip = neopixel.create(DigitalPin.P1, width * height, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P1, width * height, NeoPixelMode.RGB)
 EPXDisplay.powerupclear(strip, 10)
 strip.setMatrixWidth(width)
 pins.setMatrixWidth(DigitalPin.P1, width)
 EPXDisplay.play(strip, EPXAnimations.Weather)
 strip.show()
+basic.showString("A")
